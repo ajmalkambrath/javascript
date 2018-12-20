@@ -349,3 +349,137 @@ async/await is a great syntactic improvement for both nodejs and browser program
 Reference From:
 
 https://medium.com/@madasamy/15-javascript-concepts-that-every-nodejs-programmer-must-to-know-6894f5157cb7
+
+
+```
+Course content:
+
+Template Literals 
+	Template literals are a cleaner and more beautiful way to play with strings. They get rid of the need for a lot of + signs to concat strings.
+		`${ data }`
+		
+		let str1 = 'My name is:'
+		let name = 'Dylan';
+		let str2 = `${str1} ${name}`
+		--> 'My name is: Dylan'
+	
+Destructuring 
+	Destructuring Object
+		const data = {
+			firstName:"sam",
+			lastName: "lit",
+			age: 32
+		}
+
+		const { firstName:fn, lastName:ln } = data; <<< destructuring Object to variable name 
+		
+		console.log(fn);
+		console.log(ln);
+		
+	Destructuring Array	
+		let data1 = ["a","b","c"];
+		let [a]=sam; 		<<< destructuring Object to variable name 
+		console.log(a);
+
+		let [aa,bb,cc] = ["aa","bb","cc"];		<<< destructuring Object to variable name 
+		cconsole.log(aa);
+
+	
+Object Literal
+
+	function sample1(city,state){	
+		let obj = {city,state};   <<< Object literal help full to reduce common name 
+		console.log(obj);
+	}
+	
+	sample1("wayanad","kerala");
+	sample1();
+	
+For of loop
+
+	for(elem of arr){
+		elem
+	}
+	<< not helpfull update iterate value like elem += 200
+	
+Spread operator (...varName)
+	let data1 = [1,2,3];
+	let data2 = [...data1,5,6];
+	
+Rest operator
+	- arguement will get depricate and we can use rest operator instead and this will return an array not object
+	
+	function sample(...args){
+		console.log(args);
+	}
+	sample(1,2,3,4);
+	
+Arrow Functions
+
+	let sam = () => { }
+	let sam =  function (){ }
+	
+	let sam = (x,y) => x + y    // simplified form
+	let sam =  function (x,y){  return x + y; }
+	
+Default Params
+	function add(numArr = []){
+		let total = 0;
+		numArr.forEach(){
+			total += numArr;
+		}
+	}
+	
+	add(1,2,3);   // will print 6
+	add()		 // will print 0 and we can avoid params undefined error
+	
+Array.includes()
+	we can find out if any string contains a particular character or a substring.
+		let arr = [1,2,3,4,5];
+		arr.indexOf(0); // will return -1
+		arr.includes(5) // will return true;
+		arr.includes(0) // will return false;
+		
+Let & const
+	
+Export & import
+	for oop and modular in nature and 
+	
+	export const data =10;
+	import { data } from '/index.js';
+	
+Object.keys()
+	
+Async/Await
+	
+	async function callApi(){
+		const responce = await fetch('./URL');
+		const json = await responce;
+		return json;
+	}
+	
+	---------------
+			function resolveAfter3Seconds() {
+		  return new Promise(resolve => {
+			setTimeout(() => {
+			  resolve('resolved');
+			}, 3000);
+		  });
+		}
+
+		// resolveAfter3Seconds().then((data) => {
+		//     console.log(data);
+		// });
+
+		async function getAsyncData() {
+			const result = await resolveAfter3Seconds();
+			console.log(result);
+		}
+
+		getAsyncData();
+	
+Trailing commas
+	
+Classes
+	
+```
