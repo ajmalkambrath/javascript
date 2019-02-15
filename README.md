@@ -1,5 +1,7 @@
 # javascript
 
+
+
 ### Values & References
 
 JavaScript has 5 data types that are copied by value: Boolean, null, undefined, String, and Number. We’ll call these primitive types.
@@ -350,6 +352,8 @@ Reference From:
 
 https://medium.com/@madasamy/15-javascript-concepts-that-every-nodejs-programmer-must-to-know-6894f5157cb7
 
+
+# ES6 Features
 
 ```
 Course content:
