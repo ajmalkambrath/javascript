@@ -487,3 +487,54 @@ Trailing commas
 Classes
 	
 ```
+
+### HTTP
+```
+	- Follow clinet/server model or request/responce model
+	- Staleless protocol - Every transaction in http is independent or not related to any other transactions
+		- cookies and session make http as state full managment / provide state
+	- Application layer protocol (TCP at transport layer)
+	- Client actions GET / POST / DELETE / ETC 
+	- Server status code
+	- Headers
+		- cache-control 
+		- content-type
+```
+
+### SESSION & COOCKIES
+
+```
+	- COOCKIES ALWAS CLIENT SIDE
+	- MAKE HTTP STATE FULL
+	- SOMETIMES SESSION STORED IN CLIENT SIDE 
+		- FAST  
+		- LACK OF SPACE (4KB)
+	-
+	SESSION
+		- Stored on server
+		- more secure because never travel
+		- sore large maount of data
+		- cannot be used for futurte referance (Expiration can not be set) SESSIONS ENDS WHEN USER CLOSES THEIR BROWSER,
+
+	
+	COOCKIES
+		- Stored on client side
+		- less secure 
+		- 4kb  size 
+		- Expiration can set : COOKIES END DEPENDING ON THE LIFETIME YOU SET FOR IT. SO THEY CAN LAST FOR YEARS
+
+```
+
+### HTTP 1.1 vs HTTP 2
+
+```
+1.Binary Processing: Binary content is faster, lighter, and more compact. Instead of having four different message parsing options in HTTP/1.x, HTTP/2 has just one. Also, binary content affords more support for processing capitalizations, whitespaces, blank lines and few other notions difficult to portray in text.
+
+
+2. Multiplexing: HTTP/1.x was fundamentally built over the principle that only one response can be delivered at a time. This led to response queueing and blocking, slowing down the TCP connection. This meant till now, the client had to guess the right order of responses it needs to fetch to be able to process things quickly.
+
+3. Header Compression: HTTP/2 uses the HPACK compression technique to compress header data across requests and responses.
+
+4. Server Push: In HTTP/1.x, a server can communicate to the client only when a request is made to it, and it can communicate only by responding to that particular request. In HTTP/2 however, a server can send multiple responses to a single request. Thus, in addition to responding, the server can push other useful information to the client. 
+
+```
